@@ -54,7 +54,7 @@ jobs:
           file test/math.pdf | grep -q ' PDF '
           file test/biblatex.pdf | grep -q ' PDF '
           file test/minted.pdf | grep -q ' PDF '
-          file test/graphviz_test.pdf | grep -q ' PDF '
+          file test/graphviz.pdf | grep -q ' PDF '
 
       - name: Deploy to check generated pdf files online
         uses: docker://peaceiris/gh-pages:v2.3.1
