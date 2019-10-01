@@ -43,7 +43,7 @@ jobs:
       - name: Compile LaTeX document with graphviz
         uses: ./
         with:
-          root_file: graphviz_test.tex
+          root_file: graphviz.tex
           working_directory: test/
           args: "-xelatex -pdf -shell-escape"
 
