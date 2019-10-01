@@ -39,6 +39,14 @@ jobs:
           working_directory: test/
           extra_system_packages: python3-pygments
           args: "-pdf -latexoption=-shell-escape -latexoption=-file-line-error -latexoption=-interaction=nonstopmode"
+      
+      - name: Compile LaTeX document with graphviz
+        uses: ./
+        with:
+          root_file: graphviz_test.tex
+          working_directory: test/
+          args: "-xelatex -pdf -shell-escape"
+
       - name: Check pdf files
         run: |
           set -e
@@ -46,3 +54,13 @@ jobs:
           file test/math.pdf | grep -q ' PDF '
           file test/biblatex.pdf | grep -q ' PDF '
           file test/minted.pdf | grep -q ' PDF '
+          file test/graphviz_test.pdf | grep -q ' PDF '
+
+      - name: Deploy to check generated pdf files online
+        uses: docker://peaceiris/gh-pages:v2.3.1
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./test
+        with:
+          emptyCommits: true
