@@ -181,6 +181,12 @@ Here is an example that rebuilds uses the cache at most once a day. The files to
           key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}
 ```
 
+## Where to find my PDF?
+
+Please use an appropriate GitHub action.
+One option is [upload-artifact](https://github.com/actions/upload-artifact), which collects the build artifacts and stores them into a GitHub space.
+Another option is to use rsync via [action-rsyncer](https://github.com/Pendect/action-rsyncer).
+
 ## Available versions
 
 * `@latest` points to the latest release of [DANTE e.V.'s docker-texlive](https://github.com/dante-ev/docker-texlive)
