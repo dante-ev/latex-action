@@ -3,12 +3,14 @@ on:
   push:
   schedule:
     - cron: '0 0 1 * *'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gautamkrishnar/keepalive-workflow@v2
       - name: Compile basic LaTeX document
         uses: ./
         with:
@@ -46,3 +48,11 @@ jobs:
           file test/math.pdf | grep -q ' PDF '
           file test/biblatex.pdf | grep -q ' PDF '
           file test/minted.pdf | grep -q ' PDF '
+  keepalive-job:
+    name: Keepalive Workflow
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
