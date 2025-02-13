@@ -33,7 +33,6 @@ jobs:
         with:
           root_file: biblatex.tex
           working_directory: test/
-          extra_packages: biblatex-ieee
       - name: Compile LaTeX document with minted
         uses: ./
         with:
@@ -48,6 +47,11 @@ jobs:
           file test/math.pdf | grep -q ' PDF '
           file test/biblatex.pdf | grep -q ' PDF '
           file test/minted.pdf | grep -q ' PDF '
+      - uses: actions/upload-artifact@v4
+        with:
+          name: test-directory
+          path: test/
+
   keepalive-job:
     name: Keepalive Workflow
     runs-on: ubuntu-latest
