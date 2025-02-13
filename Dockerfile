@@ -1,4 +1,4 @@
-FROM ghcr.io/dante-ev/texlive:2024-A
+FROM ghcr.io/dante-ev/texlive:2024-B
 
 WORKDIR /root
 
