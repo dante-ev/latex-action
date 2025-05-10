@@ -1,11 +1,14 @@
 name: Test Github Action
+
 on:
   push:
   schedule:
     - cron: '0 0 1 * *'
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -51,12 +54,3 @@ jobs:
         with:
           name: test-directory
           path: test/
-
-  keepalive-job:
-    name: Keepalive Workflow
-    runs-on: ubuntu-latest
-    permissions:
-      actions: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: gautamkrishnar/keepalive-workflow@v2
