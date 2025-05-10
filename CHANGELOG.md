@@ -2,11 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-This project cannot adhere to [Semantic Versioning](http://semver.org/), because it builds on TeXLive, which introcuces breaking changes now and then.
+This project cannot adhere to [Semantic Versioning](http://semver.org/), because it builds on TeXLive, which introduces breaking changes now and then.
 Thus, each new version would lead to a new major version.
 Instead, we version `YYYY-R`, where `YYYY` is TeXLive version this image is based on and `R` is numbering different releases in that cycle using characters.
 E.g., `2021-A`, `2021-B`, ...
 We use letters instead of numbers to avoid confusion with the automatic builds such as `2021-05-15`.
+
+## [2025-A] - 2025-05-10
+
+- Base on [DANTE e.V.'s docker-texlive 2025-A](https://github.com/dante-ev/docker-texlive/releases/tag/2025-A)
 
 ## [2024-B] - 2025-02-13
 
@@ -54,6 +58,7 @@ We use letters instead of numbers to avoid confusion with the automatic builds s
 
 Initial public release
 
+[2025-A]: https://github.com/dante-ev/latex-action/compare/2024-B...2025-A
 [2024-B]: https://github.com/dante-ev/latex-action/compare/2024-A...2024-B
 [2024-A]: https://github.com/dante-ev/latex-action/compare/2023-A...2024-A
 [2023-A]: https://github.com/dante-ev/latex-action/compare/2021-C...2023-A
