@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-This project cannot adhere to [Semantic Versioning](http://semver.org/), because it builds on TeXLive, which introduces breaking changes now and then.
+This project cannot adhere to [Semantic Versioning](https://semver.org/), because it builds on TeXLive, which introduces breaking changes now and then.
 Thus, each new version would lead to a new major version.
 Instead, we version `YYYY-R`, where `YYYY` is TeXLive version this image is based on and `R` is numbering different releases in that cycle using characters.
 E.g., `2021-A`, `2021-B`, ...
@@ -14,34 +14,53 @@ This version is continuously built based on [DANTE e.V.'s docker-texlive `edge` 
 
 ## [2025-A] - 2025-05-10
 
+### Changed
+
 - Base on [DANTE e.V.'s docker-texlive 2025-A](https://github.com/dante-ev/docker-texlive/releases/tag/2025-A)
 
 ## [2024-B] - 2025-02-13
+
+### Changed
 
 - Base on [DANTE e.V.'s docker-texlive 2024-B](https://github.com/dante-ev/docker-texlive/releases/tag/2024-B)
 
 ## [2024-A] - 2025-02-13
 
+### Changed
+
 - Base on [DANTE e.V.'s docker-texlive 2024-A](https://github.com/dante-ev/docker-texlive/releases/tag/2024-A)
 
 ## [2023-A] - 2023-05-12
 
-- Base on [DANTE e.V.'s docker-texlive 2023-A](https://github.com/dante-ev/docker-texlive/releases/tag/2023-A)
+### Added
+
 - Added support for `extra_font_packages` to install fonts from zip files
 
+### Changed
+
+- Base on [DANTE e.V.'s docker-texlive 2023-A](https://github.com/dante-ev/docker-texlive/releases/tag/2023-A)
+
 ## [2020-A] - 2021-09-18
+
+### Changed
 
 - Base on [DANTE e.V.'s docker-texlive 2020-A](https://github.com/dante-ev/docker-texlive/releases/tag/2020-A)
 
 ## [2019-A] - 2021-09-15
 
+### Changed
+
 - Base on [DANTE e.V.'s docker-texlive 2019-A](https://github.com/dante-ev/docker-texlive/releases/tag/2019-A)
 
 ## [2021-C] - 2021-08-04
 
+### Changed
+
 - Base on [DANTE e.V.'s docker-texlive 2021-C](https://github.com/dante-ev/docker-texlive/releases/tag/2021-C)
 
 ## [2021-B] - 2021-06-11
+
+### Changed
 
 - Base on [DANTE e.V.'s docker-texlive 2021-B](https://github.com/dante-ev/docker-texlive/releases/tag/2021-B)
 
@@ -60,7 +79,9 @@ This version is continuously built based on [DANTE e.V.'s docker-texlive `edge` 
 
 ## [0.1.0] - 2019-09-25
 
-Initial public release
+### Added
+
+- Initial public release
 
 [edge]: https://github.com/dante-ev/latex-action/compare/2025-A...edge
 [2025-A]: https://github.com/dante-ev/latex-action/compare/2024-B...2025-A
