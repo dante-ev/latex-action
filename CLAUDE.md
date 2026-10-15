@@ -54,3 +54,9 @@ automatically, so real workflows don't need this.)
 ([heylogs](https://github.com/nbbrd/heylogs)). `heylogs.properties` disables the
 rules that clash with this changelog's custom layout. Run locally via
 `jbang com.github.nbbrd.heylogs:heylogs-cli:0.18.1:bin check CHANGELOG.md`.
+
+## Markdown checks
+
+`.github/workflows/check-markdown.yml` runs markdownlint (rules in
+`.markdownlint.yml`) on all Markdown files. Run locally:
+`npx -y markdownlint-cli2 "**/*.md"`.

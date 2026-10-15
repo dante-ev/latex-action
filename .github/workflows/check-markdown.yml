@@ -1,0 +1,25 @@
+name: Check Markdown
+
+# markdownlint rules are configured in .markdownlint.yml.
+
+on:
+  push:
+    branches: [edge]
+  pull_request:
+    branches: [edge]
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Lint Markdown with markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v24
+        with:
+          globs: "**/*.md"

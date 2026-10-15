@@ -1,0 +1,5 @@
+# One sentence per line; long lines are intended.
+MD013: false
+# Each release in CHANGELOG.md repeats "Added"/"Changed" headings.
+MD024:
+  siblings_only: true

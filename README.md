@@ -1,6 +1,6 @@
 # latex-action [![GitHub Actions Status](https://github.com/dante-ev/latex-action/workflows/Test%20Github%20Action/badge.svg)](https://github.com/dante-ev/latex-action/actions)
 
-🚧 For a more lightweight solution, head to https://github.com/zauguin/install-texlive 🚧
+🚧 For a more lightweight solution, head to <https://github.com/zauguin/install-texlive> 🚧
 
 GitHub Action to compile LaTeX documents. This actions runs on docker using a [maximal TeXLive environment](https://hub.docker.com/r/danteev/texlive/) installed.
 
@@ -29,6 +29,7 @@ GitHub Action to compile LaTeX documents. This actions runs on docker using a [m
 * `extra_font_packages`
 
     The extra fonts such as some chinese fonts, please package them as a ZIP format.
+
     ```yaml
     with:
       extra_font_packages: fonts # means fonts.zip
