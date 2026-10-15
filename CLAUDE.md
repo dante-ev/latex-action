@@ -44,6 +44,9 @@ automatically, so real workflows don't need this.)
 2. `Dockerfile`: pin `FROM ghcr.io/dante-ev/texlive:<year>-R`.
 3. Commit `Release <year>-R` and tag `<year>-R`.
 4. Commit `Switch back to edge`.
+5. Move the `latest` branch to the release tag; the README tells users to
+   write `uses: dante-ev/latex-action@latest`:
+   `git push --force origin <year>-R^{commit}:refs/heads/latest`
 
 ## CHANGELOG checks
 
