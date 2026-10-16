@@ -201,6 +201,18 @@ Another option is to use rsync via [action-rsyncer](https://github.com/Pendect/a
 * `@latest` points to the latest release of [DANTE e.V.'s docker-texlive](https://github.com/dante-ev/docker-texlive)
 * `@edge` is the latest development version of [DANTE e.V.'s docker-texlive](https://github.com/dante-ev/docker-texlive)
 
+To stay on a TeX Live year, use the latest release of that year.
+Each is based on the docker-texlive release with the same tag.
+
+* `@2026-B` - latest TeX Live 2026 release
+* `@2025-A` - latest TeX Live 2025 release
+* `@2024-B` - latest TeX Live 2024 release
+* `@2023-A` - latest TeX Live 2023 release
+* `@2021-C` - latest TeX Live 2021 release
+* `@2020-A` - latest TeX Live 2020 release
+* `@2019-A` - latest TeX Live 2019 release
+* For all other versions see [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
 MIT
