@@ -41,6 +41,8 @@ automatically, so real workflows don't need this.)
 ## Cutting a release (e.g. `2026-A`)
 
 1. `CHANGELOG.md`: add a `## [<year>-R] - <date>` section + compare link.
+   `README.md`: under "Available versions", list the new tag as the latest
+   release of its TeX Live year (replacing that year's previous tag).
 2. `Dockerfile`: pin `FROM ghcr.io/dante-ev/texlive:<year>-R`.
 3. Commit `Release <year>-R` and tag `<year>-R`.
 4. Commit `Switch back to edge`.
