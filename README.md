@@ -112,7 +112,7 @@ jobs:
 
 ### Custom build script
 
-When using a custom shell script for building, one can pass this as follows:
+When using a custom executable shell script for building, set `compiler` to the script path. The script receives `root_file` as its argument; set `args` to an empty string to avoid passing the default `latexmk` flags:
 
 ```yaml
 name: Build LaTeX document
@@ -126,7 +126,9 @@ jobs:
       - name: release.sh
         uses: dante-ev/latex-action@latest
         with:
-          entrypoint: ./release.sh
+          root_file: main.tex
+          compiler: ./release.sh
+          args: ""
 ```
 
 Real life example: <https://github.com/koppor/plantuml/blob/main/.github/workflows/build-and-publish.yml>
