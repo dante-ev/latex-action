@@ -12,6 +12,12 @@ We use letters instead of numbers to avoid confusion with the automatic builds s
 
 This version is continuously built based on [DANTE e.V.'s docker-texlive `edge` build](https://github.com/dante-ev/docker-texlive/).
 
+## [2026-C] - 2026-10-18
+
+### Changed
+
+- Base on [DANTE e.V.'s docker-texlive 2026-C](https://github.com/dante-ev/docker-texlive/releases/tag/2026-C)
+
 ## [2026-B] - 2026-10-15
 
 ### Changed
@@ -95,7 +101,8 @@ This version is continuously built based on [DANTE e.V.'s docker-texlive `edge` 
 
 - Initial public release
 
-[edge]: https://github.com/dante-ev/latex-action/compare/2026-B...edge
+[edge]: https://github.com/dante-ev/latex-action/compare/2026-C...edge
+[2026-C]: https://github.com/dante-ev/latex-action/compare/2026-B...2026-C
 [2026-B]: https://github.com/dante-ev/latex-action/compare/2026-A...2026-B
 [2026-A]: https://github.com/dante-ev/latex-action/compare/2025-A...2026-A
 [2025-A]: https://github.com/dante-ev/latex-action/compare/2024-B...2025-A
